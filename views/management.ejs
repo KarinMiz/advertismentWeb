@@ -22,22 +22,23 @@
         <h2>New Advertisment</h2>
     
         <label for="title"><b>Title</b></label>
-        <input type="text" placeholder="Enter Title" name="Title" required>
+        <input type="text" id="add_title" placeholder="Enter Title" name="Title" required>
         
         <label for="content"><b>Content</b></label>
-        <input type="text" placeholder="Enter content" name="content" required>
+        <input type="text" id="content_title" placeholder="Enter content" name="content" required>
     
         <label for="image"><b>Image</b></label>
-        <input type="text" placeholder="Enter Image Url" name="image" required>
+        <input type="text" id="url_title" placeholder="Enter Image Url" name="image" required>
     
         <label for="time"><b>Time</b></label>
-        <input type="number" placeholder="Enter time in sec" name="time" required>
+        <input type="number" id="time_title" placeholder="Enter time in sec" name="time" required>
 
         <label for="Screen-number"><b>Screem Number</b></label>
-        <input type="number" placeholder="Enter Screen-number (1, 2, 3)" name="Screen-number" required>
+        <input type="number" id="add_screen" placeholder="Enter Screen-number (1, 2, 3)" name="Screen-number" required>
     
         <button type="submit" class="submit_btn">Submit</button>
         <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        document.getElementById("add_title").innerHTML
       </form>
     </div>
 
@@ -81,6 +82,7 @@
         $(ctl).parents("tr").remove();
         delete_from_db(ctl.id);
     }
+
     function editadv(ctl){
         _row = $(ctl).parents("tr");
         var cols = _row.children("td");
